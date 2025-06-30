@@ -1,16 +1,43 @@
 {
-  "name": "uuid_generator",
+  "name": "uuid-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A comprehensive UUID generator with CLI support",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "demo": "node index.js",
+    "test": "node test.js",
+    "generate": "node index.js gen",
+    "validate": "node index.js validate",
+    "batch": "node index.js batch",
+    "lint": "echo 'Linting...' && node -c index.js",
+    "dev": "nodemon index.js",
+    "build": "echo 'Building UUID Generator...' && npm test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "keywords": [
+    "uuid",
+    "generator",
+    "cli",
+    "unique-identifier",
+    "node.js"
+  ],
+  "author": "Aman Prajapati",
+  "license": "MIT",
   "dependencies": {
-    "uuid": "^11.1.0"
-  }
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aman3255/UUID_Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aman3255/UUID_Generator/issues"
+  },
+  "homepage": "https://github.com/aman3255/UUID_Generator#readme"
 }
