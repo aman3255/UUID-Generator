@@ -1,17 +1,20 @@
-# Use lightweight Node image
+# Use full Node.js base image
 FROM node:18-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy only package files first
+# Copy dependency definitions
 COPY package*.json ./
 
-# Install only production dependencies
-RUN npm install --omit=dev
+# Install all dependencies including devDependencies
+RUN npm install
 
-# Copy rest of the app
+# Copy rest of the files
 COPY . .
 
-# Set default command (change as needed)
+# Install nodemon globally (optional but good)
+RUN npm install -g nodemon
+
+# Default command for development
 CMD ["npm", "run", "dev"]
