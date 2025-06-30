@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "demo": "node index.js",
-    "test": "node test.js",
+    "test": "jest",
     "generate": "node index.js gen",
     "validate": "node index.js validate",
     "batch": "node index.js batch",
@@ -16,7 +16,6 @@
   },
   "keywords": [
     "uuid",
-    
     "generator",
     "cli",
     "unique-identifier",
@@ -28,6 +27,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.10"
   },
   "engines": {
