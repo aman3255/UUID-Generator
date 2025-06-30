@@ -20,7 +20,7 @@ jobs:
         node-version: '18'
 
     - name: 📦 Install dependencies
-      run: npm ci
+      run: npm i
 
     - name: ✅ Run Dev Command
       run: npm run dev
